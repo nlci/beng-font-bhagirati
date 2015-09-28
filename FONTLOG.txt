@@ -1,0 +1,28 @@
+FONTLOG
+Bhagirati - NLCI Bengali fonts
+==============================
+
+This file provides detailed information on the NLCI Bengali fonts.
+This information should be distributed along with the NLCI Bengali fonts and any derivative works.
+
+Basic Font Information
+----------------------
+
+Pan Bengali font designed to support all the languages using the Bengali script.
+
+ChangeLog
+---------
+(This should list both major and minor changes, most recent first.)
+
+22 Sep 2015 (Dev NLCI) NLCI Bengali fonts version 0.100
+
+Acknowledgements
+----------------
+(If you make modifications be sure to add your
+name (N), email (E), web-address (W) and description (D).
+This list is sorted by last name in alphabetical order.)
+
+N: Dev NLCI
+E: dev@nlife.in
+W: http://www.nlci.in/fonts/
+D: NLCI designers and font engineers
