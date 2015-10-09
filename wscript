@@ -31,12 +31,13 @@ stylesLegacy = ('', 'BD', 'I')
 
 # set build parameters
 fontbase = 'source/'
+tag = script.upper()
 
 for f, fLegacy in zip(faces, facesLegacy):
     for (s, sn, sLegacy) in zip(styles, stylesName, stylesLegacy):
-        font(target = process(script.title() + f + s + '.ttf',
+        font(target = process(tag + f + '-' + sn + '.ttf',
                 cmd('psfix ${DEP} ${TGT}'),
-                name(script.upper() + ' ' + f, lang='en-US', subfamily=(sn))
+                name(tag + ' ' + f, lang='en-US', subfamily=(sn))
                 ),
             source = legacy(f + s + '.ttf',
                             source = fontbase + 'archive/' + fLegacy + sLegacy + '.ttf',
