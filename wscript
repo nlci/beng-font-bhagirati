@@ -35,7 +35,7 @@ tag = script.upper()
 
 for f, fLegacy in zip(faces, facesLegacy):
     for (s, sn, sLegacy) in zip(styles, stylesName, stylesLegacy):
-        font(target = process(tag + f + '-' + sn + '.ttf',
+        font(target = process(tag + f + '-' + sn.replace(' ', '') + '.ttf',
                 cmd('psfix ${DEP} ${TGT}'),
                 name(tag + ' ' + f, lang='en-US', subfamily=(sn))
                 ),
