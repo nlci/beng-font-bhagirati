@@ -88,14 +88,14 @@ for f in faces:
                 name(tag + ' ' + f, lang='en-US', subfamily=(sn))
                 ),
             source = fontbase + f + snf + '.ufo',
-            # opentype = fea(f + sn + '.fea',
+            # opentype = fea(f + snf + '.fea',
             #     master = fontbase + 'master.fea',
             #     make_params = ''
             #     ),
             #graphite = gdl(generated + f + snf + '.gdl',
             #    master = fontbase + 'master.gdl',
-            #    make_params = '-p 1',
-            #    params =  '-e ' + f + snf + '_gdlerr.txt'
+            #    make_params = '-p 1 -s 2',
+            #    params = '-e ' + f + snf + '_gdlerr.txt'
             #    ),
             #classes = fontbase + 'bhagirati_classes.xml',
             #ap = generated + f + snf + '.xml',
