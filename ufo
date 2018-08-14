@@ -4,43 +4,10 @@ faces="Bhagirati"
 styles=(Regular Bold Italic)
 desc_long="Pan Bengali font designed to support all the languages using the Bengali script."
 
-ufo=results/ufo
-export src=source
 export nlci=$HOME/script/tools
-# grep -E "faces|styles" wscript | grep = > wscript.py
-rm -f *.sfd
+source ${nlci}/prepare.bash
 
-
-export FLOWARGS=""
-smith distclean -l
-smith configure -l
-smith build -l
-
-pushd ${ufo}
-for ttf in *.ttf
-do
-    echo $ttf
-    sfd="$(basename $ttf .ttf).sfd"
-    fontforge -script ${nlci}/ttf2sfd.ff $ttf $sfd
-done
-popd
-
-sort -o cs/charis/pre.txt cs/charis/composite.txt cs/charis/decomposition.txt
-sort -o cs/gentium/pre.txt cs/gentium/composite.txt cs/gentium/decomposition.txt
-python addchars.py ${ufo}
-
-pushd ${ufo}
-for sfd in *.sfd
-do
-    echo $sfd
-    ufo2="$(basename $sfd .sfd).ufo"
-    fontforge -script ${nlci}/sfd2ufo.ff $sfd $ufo2
-done
-popd
-
-rm -rf ${src}/*.ufo
-mv -v ${ufo}/*.ufo ${src}
-mv -v ${ufo}/*.sfd ${src}
+source ${nlci}/addchars.bash
 
 source ${nlci}/metadata.bash
 echo "done producing UFO sources"
