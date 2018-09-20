@@ -1,6 +1,6 @@
 #!/bin/bash
 
-faces="Bhagirati"
+faces=(Bhagirati)
 styles=(Regular Bold Italic)
 desc_long="Pan Bengali font designed to support all the languages using the Bengali script."
 
