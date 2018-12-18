@@ -47,7 +47,7 @@ if '-s' in opts:
 
 # set build parameters
 fontbase = 'source/'
-archive = fontbase + 'archive/'
+archive = fontbase + 'archive/unhinted/'
 generated = 'generated/'
 tag = script.upper()
 
@@ -59,16 +59,14 @@ hackos2 = os2.hackos2(panose, codePageRange, unicodeRange)
 if '-l' in opts:
     for f, fLegacy in zip(faces, facesLegacy):
         for (s, sn, sLegacy) in zip(styles, stylesName, stylesLegacy):
-            gentium = '../../../../latn/fonts/gentium_local/basic/1.102/zip/unhinted/1000/GenBkBas' + s.replace('-', '') + '.ttf'
-            charis = '../../../../latn/fonts/charis_local/5.000/zip/unhinted/1000/CharisSIL' + s + '.ttf'
             font(target = process('ufo/' + f + '-' + sn.replace(' ', '') + '.ttf',
                     cmd(hackos2 + ' ${DEP} ${TGT}'),
                     name(f, lang='en-US', subfamily=(sn))
                     ),
                 source = legacy(f + s + '.ttf',
-                                source = archive + 'unhinted/' + fLegacy + sLegacy + '.ttf',
+                                source = archive + fLegacy + sLegacy + '.ttf',
                                 xml = fontbase + 'bhagirati_unicode.xml',
-                                #params = '-f ' + gentium,
+                                params = '',
                                 noap = '')
                 )
 
