@@ -7,7 +7,5 @@ desc_long="Pan Bengali font designed to support all the languages using the Beng
 export nlci=$HOME/script/tools
 source ${nlci}/prepare.bash
 
-source ${nlci}/addchars.bash
-
 source ${nlci}/metadata.bash
 echo "done producing UFO sources"
