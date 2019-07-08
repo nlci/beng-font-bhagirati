@@ -8,8 +8,8 @@ ufo = sys.argv[1]
 font = OpenFont(ufo)
 
 # Modify UFO
-danda = font['u0964']
-danda.name = 'danda'
+double = font['doubledanda']
+double.name = 'dandadbl'
 
 # Save UFO
 font.changed()
