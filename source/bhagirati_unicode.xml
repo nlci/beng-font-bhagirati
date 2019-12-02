@@ -14,7 +14,7 @@
 <glyph PSName="parenleft.beng"><base UID="F028"></base></glyph>
 <glyph PSName="parenright.beng"><base UID="F029"></base></glyph>
 <glyph UID="0964" PSName="danda"><base UID="F02A"></base></glyph>
-<glyph UID="0965" PSName="doubledanda"><base UID="F02A"></base><base UID="F02A"></base></glyph>
+<glyph UID="0965" PSName="dandadbl"><base UID="F02A"></base><base UID="F02A"></base></glyph>
 <glyph UID="0987" PSName="u0987"><base UID="F02B"></base></glyph>
 <glyph PSName="comma.beng"><base UID="F02C"></base></glyph>
 <glyph PSName="hyphen.beng"><base UID="F02D"></base></glyph>
